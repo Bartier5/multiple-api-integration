@@ -18,8 +18,9 @@ async def fetch_space(session):
 
 
 async def fetch_quote(session):
-    async with session.get(URLS["quote"]) as response:
-        return await response.json()
+    headers = {"User-Agent": "Mozilla/5.0"}
+    async with session.get(URLS["quote"], headers=headers) as response:
+        return await response.json(content_type=None)
 
 
 async def fetch_all(coins=COINS):

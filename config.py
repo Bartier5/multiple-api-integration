@@ -9,7 +9,7 @@ COINS = ["bitcoin","ethereum,","solana"]
 URLS = {
     "crypto":"https://api.coingecko.com/api/v3/simple/price",
     "space":"https://api.nasa.gov/planetary/apod",
-    "qoute":"https://api.quotable.io/random?tags=technology,success",
+    "qoute":"https://zenquotes.io/api/random",
     
 }
 CACHE_TTL = 300 #5 minutes

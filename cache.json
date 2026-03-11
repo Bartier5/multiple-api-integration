@@ -1,0 +1,1 @@
+{"timestamp": 1773228568.3249156, "data": {"crypto": {"": {"price": 0.0, "change": 0}, "bitcoin": {"price": 69525, "change": -1.8}, "ethereum": {"price": 2022.61, "change": -1.87}, "solana": {"price": 85.09, "change": -2.4}}, "space": null, "quote": null, "errors": {"space": "Space fetch failed", "quote": "Quote fetch failed"}}}

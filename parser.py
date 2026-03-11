@@ -4,8 +4,8 @@ def parse_crypto(raw):
         return{"error":"Crypto fetch failed"}
     result = {}
     for coin in raw:
-        price =raw[coin].get("usd",0)
-        change = raw[coin].get("usd_24h_change", 0)
+        price =raw[coin].get("usd") or 0
+        change = raw[coin].get("usd_24h_change") or 0
         result[coin] = {
             "price": round(price, 2),
             "change": round(change, 2),
@@ -22,10 +22,10 @@ def parse_space(raw):
 def parse_quote(raw):
     if isinstance(raw, Exception):
         return {"error": "Quote fetch failed"}
-
+    quote = raw[0]
     return {
-        "text":   raw.get("content", "N/A"),
-        "author": raw.get("author", "N/A"),
+        "text":   quote.get("q", "N/A"),
+        "author": quote.get("a", "N/A"),
     }
 def parse_all(raw_data):
     return {
